@@ -1,0 +1,164 @@
+/* changing default styles of body  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+/* style rules for logo */
+
+.site-identity {
+  float: left;
+}
+
+.site-identity p {
+  font-size: 40px;
+  margin: .1em 0 0 0;
+  display: inline-block;
+  color: #fff;
+}
+
+.site-identity img {
+  max-width: 54px;
+  float: left;
+  margin: 0 11px 0 0;
+  border-radius: 20%;
+}
+
+
+  /* style rules for content section */
+  
+  h3{
+    color: #f2796e;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f2796e;
+    width: 55%;
+    min-height: 100vh;
+    padding: 10px 20px;
+  }
+  
+  .image {
+    background-image: url("../images/about.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* border: 2px solid black; */
+    height: 70%;
+  }
+  
+  .text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 0px;
+  }
+   
+  
+  /* style rules for form section */
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    /* max-width: 400px; */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  }
+  
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text span{
+    color: black;
+    font-size: xx-large;
+    font-weight: bolder;
+
+}
+
+.text p{
+    color: black;
+}
+
+  .container text p{
+    text-align: left;
+  }
+
+   /* style rules for social section */
+
+   
+
+  /* Media Queries */
+  
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    form,
+    .content {
+      width: 100%;
+    }
+  
+    .btn {
+      flex-direction: column;
+    }
+    .image {
+      height: 70vh;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    form {
+      padding: 20px;
+    }
+  }
+  
+  /* close button */
+  
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    color: black;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color : black;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
